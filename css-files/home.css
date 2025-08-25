@@ -1,0 +1,317 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'mainFont'; 
+  src: url('../fonts/AL-Mohanad-Extra-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'button'; 
+  src: url('../fonts/ArbFONTS-ArabicUIDisplayMedium.otf') format('truetype');
+}
+
+body { 
+  font-family: 'mainFont', sans-serif;
+  margin:0;
+  padding:0;
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  background-color: #b7b7b7;
+  background-image: url("../images/main.jpg");
+  background-size: cover;  
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+}
+
+/* ---------------- NAVBAR ---------------- */
+.navbar {
+  background: #20202080;
+  color:#fff;
+  text-align:center;
+  padding: 20px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.3rem;
+  flex-wrap: wrap;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links li a.active {
+  color: #ff6600;        
+  font-weight: bold;     
+  border-bottom: 2px solid #ff6600; 
+}
+
+.home-icon,
+.login-icon {
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-icon i,
+.login-icon i {
+  color: #ffffff;
+  font-size: 20px;
+  transition: color 0.3s ease-in-out;
+}
+
+.home-icon:hover,
+.login-icon:hover {
+  background-color: #e76f51; 
+  border-color: #e76f51;
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.home-icon:hover i,
+.login-icon:hover i {
+  color: #ffffff; 
+}
+
+.login-icon:active {
+  background-color: #cc5200; 
+  border-color: #cc5200;
+  transform: scale(0.95);    
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+/* ---------------- STATUS BOXES ---------------- */
+.status-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  font-size: 1.4rem;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.status-container div {
+  display: flex;  
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 20px;
+  flex: 1 1 250px; /* responsive width */
+  min-width: 200px;
+  text-align: center;
+}
+
+.status-container .sessions-number {
+  background-color: #e67e22;  
+  color: #fff;
+  padding: 25px;
+  border-radius: 20px;
+}
+
+.status-container .patients-number {
+  background-color: #6c5ce7;  
+  color: #fff;
+  padding: 25px;
+  border-radius: 20px;
+}
+
+.status-container .healed {
+  background-color: #27ae60;  
+  color: #fff;
+  padding: 25px;  
+  border-radius: 20px;
+}
+
+/* ---------------- SESSIONS ---------------- */
+.sessions-container {
+  font-family: 'button', sans-serif;
+  background: white;
+  padding: 25px;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 1100px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.sessions-container h2 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+/* ---------------- TABLE ---------------- */
+.table-container {
+  overflow-x: auto;
+  max-height: 500px;
+  border-radius: 20px;
+  direction: ltr;
+}
+
+.sessions-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.sessions-table th,
+.sessions-table td {
+  padding: 15px;
+  text-align: center;
+}
+
+th {
+  background-color: #5AA7DB;
+  color: white;
+}
+
+.sessions-table th:nth-child(1),
+.sessions-table td:nth-child(1) { width: 10%; }  
+
+.sessions-table th:nth-child(2),
+.sessions-table td:nth-child(2) { width: 25%; }  
+
+.sessions-table th:nth-child(3),
+.sessions-table td:nth-child(3) { width: 20%; }  
+
+.sessions-table th:nth-child(4),
+.sessions-table td:nth-child(4) { width: 45%; }  
+
+/* Scrollbar */
+.table-container::-webkit-scrollbar {
+  height: 10px;
+}
+.table-container::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+.table-container::-webkit-scrollbar-thumb {
+  background-color: #cbd5e0;
+  border-radius: 4px;
+}
+.table-container::-webkit-scrollbar-thumb:hover {
+  background-color: #a0aec0;
+}
+
+/* ---------------- LINKS ---------------- */
+#name {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+#name:hover {
+  color: #5AA7DB;
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+#name:active {
+  color: #e76f51;
+  transform: scale(0.95);
+}
+
+#details {
+  text-decoration: none;
+  color: #5AA7DB;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+#details:hover {
+  color: #0e6dad;
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+#details:active {
+  color: #e76f51;
+  transform: scale(0.95);
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 1024px) {
+  .nav-links {
+    font-size: 1.1rem;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    position: static;
+    transform: none;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .status-container {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .sessions-container {
+    padding: 20px;
+  }
+  .status-container div {
+    row-gap: 0px;
+    padding: 5px;
+    justify-content: center;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .status-container div {
+    row-gap: 0px;
+    padding: 5px;
+    justify-content: center;
+    height: auto;
+  }
+  .sessions-container h2 {
+    font-size: 1.3rem;
+  }
+
+  .sessions-table th, 
+  .sessions-table td {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .nav-links {
+    font-size: 1rem;
+  }
+}

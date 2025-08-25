@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../css-files/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="login-icon">
+                <a href="profile.html"><i class="fas fa-user"></i></a>
+            </div>
+            <div class="home-icon">
+                <a href="home-page.html"><i class="fas fa-home"></i></a>
+            </div>
+        </div>
+        <div class="form-container">
+            <form>
+                <h3>إنشاء حساب</h3>
+                <label for="name" id="name-label">الاسم</label>
+                <input type="text" name="name" id="name" placeholder="ادخل اسمك">
+                <label for="id-number" id="id-number-label">الرقم القومي</label>
+                <input type="text" name="id-number" id="id-number" placeholder="اخدل رقمك القومي">
+                <label for="number" id="number-label">رقم الهاتف</label>
+                <input type="text" name="number" id="number" placeholder="ادخل رقم الهاتف">
+                <label for="birthdate">تاريخ الميلاد</label>
+                <input type="date" id="birthdate" name="birthdate">
+                <label for="email" id="email-label">البريد الاليكتروني</label>
+                <input type="email" name="email" id="email" placeholder="example@email.com">
+                <label for="password" id="password-label">كلمة المرور</label>
+                <input type="password" name="password" id="password" placeholder="********">
+                <label for="password" id="password-label">تأكيد كلمة المرور</label>
+                <input type="password" name="password" id="password" placeholder="********">
+                <button type="submit">تسجيل الدخول</button>
+            </form>
+            <div class="has-account"><a href="login.html">لدي حساب</a></div>
+        </div>
+    </div>
+</body>
+<script src="../js-files/index.js"></script>
+</html>

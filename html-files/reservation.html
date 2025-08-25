@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>احجز</title>
+    <link rel="stylesheet" href="../css-files/reservation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="navbar">
+      <div class="login-icon">
+          <a href="profile.html"><i class="fas fa-user"></i></a>
+      </div>
+        <ul class="nav-links">
+          <li><a href="home-page.html">الصفحة الرئيسية</a></li>
+          <li><a href="courses.html">الكورسات</a></li>
+          <li><a href="about.html">عنّا</a></li>
+          <li><a href="contact-us.html">تواصل معنا</a></li>
+          </ul>
+      <div class="book-now">
+        <a href="reservation.html">احجز</a>
+      </div>
+    </div>
+    <div class="container">
+    <div class="spec-container">
+    <h2>التخصصات :</h2>
+    <div class="specialties">
+      <div class="specialty" onclick="selectSpecialty(this)" data-name="عظام">
+        <img src="../images/عظام.jpeg" alt="عظام" />
+        <p>عظام</p>
+      </div>
+      <div class="specialty" onclick="selectSpecialty(this)" data-name="أعصاب">
+        <img src="../images/أعصاب.jpeg" alt="أعصاب" />
+        <p>أعصاب</p>
+      </div>
+      <div class="specialty" onclick="selectSpecialty(this)" data-name="أطفال">
+        <img src="../images/أطفال.jpeg" alt="أطفال" />
+        <p>أطفال</p>
+      </div>
+      <div class="specialty" onclick="selectSpecialty(this)" data-name="صحة مرأة">
+        <img src="../images/صحة-المرأة.jpeg" alt="صحة مرأة" />
+        <p>صحة المرأة</p>
+      </div>
+      <div class="specialty" onclick="selectSpecialty(this)" data-name="عناية مركزة">
+        <img src="../images/عناية.jpeg" alt="عناية مركزة" />
+        <p>عناية مركزة</p>
+      </div>
+      <div class="specialty" onclick="selectSpecialty(this)" data-name="باطنة وصدر و قلب">
+        <img src="../images/باطنةوصدروقلب.jpeg" alt="باطنة وصدر وقلب" />
+        <p>باطنة وصدر وقلب</p>
+      </div>
+      <div class="specialty" onclick="selectSpecialty(this)" data-name="جراحة وجلد وحروق">
+        <img src="../images/جراحةوجلدوحروق.jpeg" alt="جراحة وجلد وحروق" />
+        <p>جراحة وجلد وحروق</p>
+      </div>
+    </div>
+
+    <input type="date" id="date" />
+    <input type="time" id="time" />
+    <input type="text" id="selectedSpecialty" placeholder="لم يتم اختيار تخصص" readonly />
+    <div class="appointment-type">
+      <label class="custom-check">
+        <input type="checkbox" id="existingCourseCheck">
+        <span class="check-text">حجز جلسة جديدة من كورس سابق</span>
+      </label>
+    
+      <label class="custom-check">
+        <input type="checkbox" id="newCourseCheck">
+        <span class="check-text">حجز كورس جديد</span>
+      </label>
+    </div>
+
+    <div class="choose-course" id="previousCoursesContainer" style="display:none;">
+      <label for="previousCourses">اختر الكورس :</label>
+      <select id="previousCourses">
+        <option value="">-- اختر كورس --</option>
+        <option value="course1">كورس علاج عظام</option>
+        <option value="course2">كورس علاج أعصاب</option>
+        <option value="course3">كورس صحة المرأة</option>
+      </select>
+    </div>
+    <button onclick="bookAppointment()">احجز موعدك</button>
+  </div>
+
+  <div class="popup" id="successPopup">
+    <div class="popup-content">
+      <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" fill="#00c200" viewBox="0 0 24 24"><path d="M10 15.172l7.293-7.293 1.414 1.414L10 18 5.293 13.293l1.414-1.414z"/></svg>
+      <h3>تم الحجز بنجاح</h3>
+      <button onclick="closePopup()">حسنًا</button>
+    </div>
+  </div>
+  </div>
+</body>
+<script src="../js-files/index.js"></script>
+</html>

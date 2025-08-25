@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المرضى</title>
+    <link rel="stylesheet" href="../css-files/patients.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="login-icon">
+            <a href="../html-files/profile.html"><i class="fas fa-user"></i></a>
+        </div>
+            <ul class="nav-links">
+            <li><a href="home.html">الصفحة الرئيسية</a></li>
+            <li><a href="patients.html">المرضى</a></li>
+            <li><a href="users.html">المستخدمين</a></li>
+            </ul>
+        <div class="home-icon">
+            <a href="home.html"><i class="fas fa-home"></i></a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="overlay">
+
+            <div class="search-box">
+                 <button onclick="filterTable()"><i class="fa fa-search"></i></button>
+                <input type="text" id="nameSearch" placeholder="بحث بالاسم">
+               
+            </div>
+
+            <div class="date-filter">
+                <label>من:</label>
+                <input type="date" id="fromDate">
+                <label>إلى:</label>
+                <input type="date" id="toDate">
+                <button onclick="filterTable()">بحث </button>
+            </div>
+            <div class="table-container">
+                <div class="table">
+                <table id="appointmentsTable">
+                    <thead>
+                        <tr>
+                            <th>الاسم</th>
+                            <th>الساعة</th>
+                            <th>تاريخ الحجز</th>
+                            <th>نوع العيادة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>احمد محمد</td>
+                            <td>08:00م</td>
+                            <td>2025-01-15</td>
+                            <td>باطنة</td>
+                        </tr><tr>
+                            <td> محمد احمد </td>
+                            <td>01:00م</td>
+                            <td>2025-08-15</td>
+                            <td>عظام</td>
+                        </tr><tr>
+                            <td>مازن محمد</td>
+                            <td>01:00م</td>
+                            <td>2025-08-15</td>
+                            <td>باطنة</td>
+                        </tr><tr>
+                            <td>زياد ايمن</td>
+                            <td>01:00م</td>
+                            <td>2025-09-9</td>
+                            <td>باطنة</td>
+                        </tr>
+                        <tr>
+                            <td>سارة علي</td>
+                            <td>03:00م</td>
+                            <td>2025-08-20</td>
+                            <td>عظام</td>
+                        </tr>
+                        <tr>
+                            <td>محمد محمود</td>
+                            <td>10:00ص</td>
+                            <td>2025-08-22</td>
+                            <td>جلدية</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+
+    </div>
+    </div>
+</body>
+<script src="../js-files/index.js"></script>
+</html>

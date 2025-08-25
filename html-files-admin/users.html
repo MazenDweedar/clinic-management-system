@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إدارة المستخدمين</title>
+  <link rel="stylesheet" href="../css-files/users.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="navbar">
+      <div class="login-icon">
+            <a href="../html-files/profile.html"><i class="fas fa-user"></i></a>
+      </div>
+          <ul class="nav-links">
+            <li><a href="home.html">الصفحة الرئيسية</a></li>
+            <li><a href="patients.html">المرضى</a></li>
+            <li><a href="users.html">المستخدمين</a></li>
+          </ul>
+      <div class="home-icon">
+        <a href="home.html"><i class="fas fa-home"></i></a>
+      </div>
+  </div>
+
+  <div class="container">
+    <div class="main">
+        <div class="top">
+            <h1>إدارة المستخدمين :</h1>
+            <button id="addUserBtn">إضافة مستخدم جديد</button>
+        </div>
+        <div class="table-container">   
+        <table id="usersTable" border="1">
+          <thead>
+            <tr>
+              <th>الاسم</th>
+              <th>الرقم القومي</th>
+              <th>الدور</th>
+            </tr>
+            <tbody>
+              <tr>
+                <td>د. أحمد</td>
+                <td>101</td>
+                <td><span class="role doctor"><i class="fas fa-user-md"></i> طبيب</span></td>
+              </tr>
+              <tr>
+                <td>محمد</td>
+                <td>202</td>
+                <td><span class="role honor"><i class="fas fa-graduation-cap"></i>طالب امتياز</span></td>
+              </tr>
+              <tr>
+                <td>سارة</td>
+                <td>303</td>
+                <td><span class="role honor-perm"><i class="fas fa-award"></i>طالب امتياز</span></td>
+              </tr>
+            </tbody>
+
+        </table>
+        </div>
+    </div>
+    </div>
+
+</body>
+<script src="../js-files/index.js"></script>
+</html>

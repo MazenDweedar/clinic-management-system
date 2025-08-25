@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'mainFont'; 
+  src: url('../fonts/AL-Mohanad-Extra-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'button'; 
+  src: url('../fonts/ArbFONTS-ArabicUIDisplayMedium.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body { 
+    font-family: 'mainFont', sans-serif;
+    margin:0;
+    padding:0;
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    background-color: #b7b7b7;
+    background-image: url("../images/main.jpg");
+    background-size: cover;  
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+}
+
+.container {
+  width: 100%;      
+  height: calc(100vh - 89px);    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   
+  align-items: center;      
+}
+
+.navbar {
+    background: #20202080;
+    color:#fff;
+    text-align:center;
+    padding: 20px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.3rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links li a.active {
+  color: #ff6600;        
+  font-weight: bold;     
+  border-bottom: 2px solid #ff6600; 
+}
+
+.home-icon {
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.home-icon i {
+  color: #ffffff;
+  font-size: 20px;
+  transition: color 0.3s ease-in-out;
+}
+
+.home-icon:hover {
+  background-color: #e76f51; 
+  border-color: #e76f51;
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.home-icon:hover i {
+  color: #ffffff; 
+}
+
+
+.login-icon {
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  padding: 10px;
+  display: inline-flex; 
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.login-icon i {
+  color: #ffffff;
+  font-size: 20px;
+  transition: color 0.3s ease-in-out;
+}
+
+.login-icon:hover {
+  background-color: #e76f51; 
+  border-color: #e76f51;
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.login-icon:hover i {
+  color: #ffffff; 
+}
+
+.login-icon:active {
+  background-color: #cc5200; 
+  border-color: #cc5200;
+  transform: scale(0.95);    
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.main{
+  background-color: #FAFAFA;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+}
+
+.top{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.top h1{
+  padding-right: 20px;
+}
+
+.table-container{
+  width: 100%;
+}
+
+.container h1 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-size: 28px;
+  text-align: center;
+}
+
+/* Add User Button */
+#addUserBtn {
+  background-color: #5AA7DB;
+  color: #FAFAFA;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-family: 'button', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+}
+
+#addUserBtn:hover {
+  background-color: #e76f51;  
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+#addUserBtn:active {
+  background-color: #cc5200;  
+  transform: scale(0.97);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+/* Users Table */
+#usersTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+
+
+#usersTable th, 
+#usersTable td {
+  padding: 14px 16px;
+  text-align: center;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.1rem;
+}
+
+#usersTable th {
+  background-color: #5AA7DB;
+  color: white;
+  font-size: 1.2rem;
+}
+
+#usersTable tr:hover {
+  background-color: #f1f1f1;
+  transition: background-color 0.3s;
+}
+
+#usersTable tr:last-child td {
+  border-bottom: none;
+}
+
+#usersTable th:nth-child(1),
+#usersTable td:nth-child(1) { width: 50%; }  
+#usersTable th:nth-child(2),
+#usersTable td:nth-child(2) { width: 30%; }  
+#usersTable th:nth-child(3),
+#usersTable td:nth-child(3) { width: 20%; }  
+
+
+.role {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-align: center;
+  min-width: 180px;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+/* Doctor – Admin vibes (red gradient + glow) */
+.role {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-align: center;
+  min-width: 180px;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+/* Doctor – Green (trustworthy admin) */
+.role.doctor {
+  background: linear-gradient(135deg, #43a047, #2e7d32);
+  color: #fff;
+  box-shadow: 0 0 12px rgba(67, 160, 71, 0.4);
+}
+
+/* Honor Student with Permissions – Gray */
+.role.honor-perm {
+  background: #e0e0e0;
+  color: #333;
+  border: 1px solid   #8a8a8a;
+}
+
+/* Honor Student without Permissions – White */
+.role.honor {
+  background: #ffffff;
+  color: #333;
+  border: 1px solid #ddd;
+}
+

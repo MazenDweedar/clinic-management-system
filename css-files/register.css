@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'mainFont'; 
+  src: url('../fonts/AL-Mohanad-Extra-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'button'; 
+  src: url('../fonts/ArbFONTS-ArabicUIDisplayMedium.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body { 
+    font-family: 'mainFont', sans-serif;
+    margin:0;
+    padding:0;
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    background-color: #b7b7b7;
+}
+
+.container {
+  width: 100%;      
+  min-height:100vh;    
+  background-image: url("../images/main.jpg");
+  background-size: cover;  
+  background-position: center; 
+  background-repeat: no-repeat; 
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+    background: #20202080;
+    color:#fff;
+    text-align:center;
+    padding: 10px 20px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-icon {
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.home-icon i {
+  color: #ffffff;
+  font-size: 20px;
+  transition: color 0.3s ease-in-out;
+}
+
+.home-icon:hover {
+  background-color: #e76f51; 
+  border-color: #e76f51;
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.home-icon:hover i {
+  color: #ffffff; 
+}
+
+.home-icon:active {
+  background-color: #cc5200; 
+  border-color: #cc5200;
+  transform: scale(0.95);    
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.login-icon {
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  padding: 10px;
+  display: inline-flex; 
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.login-icon i {
+  color: #ffffff;
+  font-size: 20px;
+  transition: color 0.3s ease-in-out;
+}
+
+.login-icon:hover {
+  background-color: #e76f51; 
+  border-color: #e76f51;
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.login-icon:hover i {
+  color: #ffffff; 
+}
+
+.login-icon:active {
+  background-color: #cc5200; 
+  border-color: #cc5200;
+  transform: scale(0.95);    
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.form-container{
+    width: 500px;
+    margin: auto;
+    min-height: auto;
+    background-color: #FAFAFA;
+    border-radius: 24px;
+}
+
+.form-container form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15PX 20px 0;
+}
+
+.form-container form h3{
+    font-size: 35px;
+}
+
+label{
+    margin-top: 12px;
+    align-self: flex-start;
+    font-size: 20px;
+}
+
+input{
+    margin-top: 3px;
+    width: 100%;
+    padding: 16.5px 16px 13.5px;
+    border-radius: 8px;
+    border-width: 0.4px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'button', sans-serif;
+}
+
+.form-container form button {
+    width: 100%;
+    background-color: #5AA7DB;
+    margin-top: 24px;
+    border: none;
+    border-radius: 16px;
+    font-size: 20px;
+    color: #FAFAFA;
+    padding: 20px;
+    font-family: 'button', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.form-container form button:hover {
+    background-color: #e76f51;  /* orange hover */
+    transform: scale(1.01);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.form-container form button:active {
+    background-color: #cc5200;  /* darker orange */
+    transform: scale(0.97);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.has-account{
+  font-family: 'button', sans-serif;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 30px;  
+  font-size: 1rem;
+  font-weight: lighter;
+}
+
+.has-account a{
+  text-decoration: none;
+  font-weight: lighter;
+}
+
+.has-account a:hover {
+  color: #e76f51;   /* orange hover color */
+  text-decoration: underline;  /* optional */
+}
