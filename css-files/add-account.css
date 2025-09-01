@@ -170,6 +170,22 @@ select {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
+input[type="file"] {
+  margin-top: 10px;
+  padding: 14px;
+  border: 2px dashed #5AA7DB; 
+  border-radius: 12px;
+  background-color: #fdfdfd;
+  cursor: pointer;
+  font-family: 'button', sans-serif;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="file"]::file-selector-button {
+ display: none;
+}
+
 
 .form-container form button {
     width: 100%;
