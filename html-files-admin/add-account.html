@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="../css-files/register.css">
+    <link rel="stylesheet" href="../css-files/add-account.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -34,8 +34,12 @@
                 <input type="password" name="password" id="password" placeholder="********">
                 <label for="password" id="password-label">تأكيد كلمة المرور</label>
                 <input type="password" name="password" id="password" placeholder="********">
-                <label for="profile-pic" class="custom-file-upload">صورة المف الشخصي</label>
-                <input type="file" id="profile-pic" accept="image/*">
+                <label for="job">الصلاحيات:</label>
+                <select id="job" name="job">
+                  <option value="doctor">طبيب</option>
+                  <option value="intern">طالب امتياز</option>
+                  <option value="intern_privileged">طالب امتياز بصلاحيات</option>
+                </select>
                 <button type="submit">تسجيل الدخول</button>
             </form>
             <div class="has-account"><a href="login.html">لدي حساب</a></div>

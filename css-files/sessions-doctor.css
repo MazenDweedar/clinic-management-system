@@ -156,8 +156,6 @@ body {
 }
 
 .sessions-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 22px;
     max-height: calc(100vh - 300px);
     overflow: auto;

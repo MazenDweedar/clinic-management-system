@@ -141,6 +141,7 @@ body {
    Program Section
 ================================= */
 .program-container {
+  font-family: 'button';
   background: white;
   margin: 40px auto;
   padding: 20px;
@@ -192,6 +193,7 @@ body {
   display: flex;
   align-items: center;
   width: 500px;
+  cursor: pointer;
 }
 
 .arrow-btn {
